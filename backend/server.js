@@ -88,7 +88,7 @@ app.use(cors({
     }
   },
   credentials: true,
-  optionsSuccessStatus: 200 // 💡 Add this line right here!
+
 }));
 // // ─── CORS ──────────────────────────────────────────────────────────────────────
 
