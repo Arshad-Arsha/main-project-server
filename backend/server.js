@@ -23,6 +23,7 @@ const allowedOrigins = [
   'http://localhost:3000',
   'https://main-project-6hns-59csa1g7k-arshad-arshas-projects.vercel.app',
   'https://main-project-6hns.vercel.app'
+  "https://main-project-server-6.onrender.com"
   'https://careconnectad.netlify.app'
 ];
 
