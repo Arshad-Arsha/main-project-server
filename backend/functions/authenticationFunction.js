@@ -2,21 +2,33 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../schema/userSchema');
 
-// ─── Helpers ────────────────────────────────────────────────────────────────
+// // ─── Helpers ────────────────────────────────────────────────────────────────
+// const generateAccessToken = (user) =>
+//   jwt.sign(
+//     { id: user._id, role: user.role },
+//     process.env.ACCESS_SECRET_KEY,
+//     { expiresIn: '15m' }
+//   );
+
+// const generateRefreshToken = (user) =>
+//   jwt.sign(
+//     { id: user._id },
+//     process.env.REFRESH_SECRET_KEY,
+//     { expiresIn: '7d' }
+//   );
 const generateAccessToken = (user) =>
   jwt.sign(
     { id: user._id, role: user.role },
-    process.env.ACCESS_SECRET_KEY,
+    process.env.JWT_SECRET, // ✅ Updated
     { expiresIn: '15m' }
   );
 
 const generateRefreshToken = (user) =>
   jwt.sign(
     { id: user._id },
-    process.env.REFRESH_SECRET_KEY,
+    process.env.JWT_SECRET, // ✅ Updated
     { expiresIn: '7d' }
   );
-
 // ─── Register ────────────────────────────────────────────────────────────────
 const register = async (req, res) => {
   try {
