@@ -332,7 +332,7 @@ app.use((err, _req, res, _next) => {
 // ─── START SERVER (FIXED) ──────────────────────────────────
 const startServer = async () => {
   try {
-    await mongoose.connect(process.env.MONGO, {
+    await mongoose.connect(process.env.MONGO_URI, {
       serverSelectionTimeoutMS: 30000,
     });
 
