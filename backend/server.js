@@ -69,7 +69,8 @@ const PORT = process.env.PORT || 9000;
 const allowedOrigins = [
   'http://localhost:5173',
   'http://localhost:3000',
-  'https://main-project-6hns.vercel.app',
+  'https://main-project-6hns.vercel.app', // 👈 നിങ്ങളുടെ പ്രധാന Vercel യുആർഎൽ
+  'https://careconnectad.netlify.app'
 ];
 
 app.use(cors({
@@ -78,6 +79,7 @@ app.use(cors({
       !origin ||
       allowedOrigins.includes(origin) ||
       /\.vercel\.app$/.test(origin) ||
+      /\.netlify\.app$/.test(origin) ||
       /\.github\.dev$/.test(origin)
     ) {
       callback(null, true);
@@ -85,8 +87,8 @@ app.use(cors({
       callback(new Error('Not allowed by CORS'));
     }
   },
-  credentials: true
-  optionsSuccessStatus: 200
+  credentials: true,
+  optionsSuccessStatus: 200 // 💡 Add this line right here!
 }));
 // // ─── CORS ──────────────────────────────────────────────────────────────────────
 
