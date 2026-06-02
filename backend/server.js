@@ -17,21 +17,46 @@ const PORT = process.env.PORT || 9000;
 // const app  = express();
 // const PORT = process.env.PORT || 10000;
 
+// // ─── CORS ──────────────────────────────────────────────────
+// const allowedOrigins = [
+//   'http://localhost:5173',
+//   'http://localhost:3000',
+//   'https://main-project-6hns-59csa1g7k-arshad-arshas-projects.vercel.app',
+//   'https://careconnectad.netlify.app'
+// ];
+
+// app.use(cors({
+//   origin: (origin, callback) => {
+//     if (
+//       !origin ||
+//       allowedOrigins.includes(origin) ||
+//       /\.vercel\.app$/.test(origin) ||
+//       /\.netlify\.app$/.test(origin)
+//     ) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error('Not allowed by CORS'));
+//     }
+//   },
+//   credentials: true
+// }));
 // ─── CORS ──────────────────────────────────────────────────
 const allowedOrigins = [
   'http://localhost:5173',
   'http://localhost:3000',
-  'https://main-project-6hns-59csa1g7k-arshad-arshas-projects.vercel.app',
+  'https://main-project-6hns.vercel.app', // 👈 നിങ്ങളുടെ പ്രധാന Vercel URL
   'https://careconnectad.netlify.app'
 ];
 
 app.use(cors({
   origin: (origin, callback) => {
+    // !origin എന്നാൽ Postman അല്ലെങ്കിൽ മൊബൈൽ ആപ്പുകളിൽ നിന്നുള്ള റിക്വസ്റ്റുകൾ
     if (
-      !origin ||
-      allowedOrigins.includes(origin) ||
-      /\.vercel\.app$/.test(origin) ||
-      /\.netlify\.app$/.test(origin)
+      !origin || 
+      allowedOrigins.includes(origin) || 
+      /\.vercel\.app$/.test(origin) || 
+      /\.netlify\.app$/.test(origin) ||
+      /\.github\.dev$/.test(origin) // Codespace-ൽ ടെസ്റ്റ് ചെയ്യാൻ ഇത് സഹായിക്കും
     ) {
       callback(null, true);
     } else {
