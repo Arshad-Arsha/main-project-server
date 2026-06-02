@@ -1,0 +1,347 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin User",
+      "email": "admin@careconnect.com",
+      "password": "admin123",
+      "role": "admin",
+      "department": "Administration",
+      "avatar": "AU",
+      "phone": "+91 9876543210",
+      "joinDate": "2023-01-01",
+      "leaveBalance": { "annual": 20, "sick": 10, "casual": 5 }
+    },
+    {
+      "id": "2",
+      "name": "John Smith",
+      "email": "john@careconnect.com",
+      "password": "john123",
+      "role": "employee",
+      "department": "IT",
+      "avatar": "JS",
+      "phone": "+91 9876543211",
+      "joinDate": "2024-03-15",
+      "leaveBalance": { "annual": 15, "sick": 8, "casual": 3 }
+    },
+    {
+      "id": "3",
+      "name": "Sarah Johnson",
+      "email": "sarah@careconnect.com",
+      "password": "sarah123",
+      "role": "employee",
+      "department": "HR",
+      "avatar": "SJ",
+      "phone": "+91 9876543212",
+      "joinDate": "2023-07-20",
+      "leaveBalance": { "annual": 18, "sick": 10, "casual": 4 }
+    },
+    {
+      "id": "4",
+      "name": "Mike Chen",
+      "email": "mike@careconnect.com",
+      "password": "mike123",
+      "role": "employee",
+      "department": "Finance",
+      "avatar": "MC",
+      "phone": "+91 9876543213",
+      "joinDate": "2024-01-10",
+      "leaveBalance": { "annual": 12, "sick": 9, "casual": 5 }
+    }
+  ],
+  "leaveRequests": [
+    {
+      "id": "lr001",
+      "employeeId": "2",
+      "employeeName": "John Smith",
+      "department": "IT",
+      "type": "Annual Leave",
+      "startDate": "2026-05-20",
+      "endDate": "2026-05-22",
+      "days": 3,
+      "reason": "Family vacation",
+      "status": "Pending",
+      "createdAt": "2026-05-10T09:00:00Z",
+      "reviewedBy": null,
+      "reviewNote": ""
+    },
+    {
+      "id": "lr002",
+      "employeeId": "3",
+      "employeeName": "Sarah Johnson",
+      "department": "HR",
+      "type": "Sick Leave",
+      "startDate": "2026-05-12",
+      "endDate": "2026-05-13",
+      "days": 2,
+      "reason": "Medical appointment",
+      "status": "Approved",
+      "createdAt": "2026-05-09T14:00:00Z",
+      "reviewedBy": "Admin User",
+      "reviewNote": "Approved. Get well soon!"
+    },
+    {
+      "id": "lr003",
+      "employeeId": "4",
+      "employeeName": "Mike Chen",
+      "department": "Finance",
+      "type": "Casual Leave",
+      "startDate": "2026-05-15",
+      "endDate": "2026-05-15",
+      "days": 1,
+      "reason": "Personal work",
+      "status": "Rejected",
+      "createdAt": "2026-05-08T11:00:00Z",
+      "reviewedBy": "Admin User",
+      "reviewNote": "Peak period - cannot approve"
+    }
+  ],
+  "hrTickets": [
+    {
+      "id": "ht001",
+      "employeeId": "2",
+      "employeeName": "John Smith",
+      "department": "IT",
+      "category": "Payroll",
+      "subject": "Salary slip for April not received",
+      "description": "I have not received my salary slip for April 2026 via email.",
+      "priority": "High",
+      "status": "Open",
+      "createdAt": "2026-05-10T10:00:00Z",
+      "updatedAt": "2026-05-10T10:00:00Z",
+      "assignedTo": null,
+      "comments": []
+    },
+    {
+      "id": "ht002",
+      "employeeId": "4",
+      "employeeName": "Mike Chen",
+      "department": "Finance",
+      "category": "IT Support",
+      "subject": "VPN access issue",
+      "description": "Unable to connect to office VPN from home.",
+      "priority": "Medium",
+      "status": "In Progress",
+      "createdAt": "2026-05-09T15:00:00Z",
+      "updatedAt": "2026-05-11T09:00:00Z",
+      "assignedTo": "Admin User",
+      "comments": [
+        {
+          "author": "Admin User",
+          "text": "Looking into this. Will update by EOD.",
+          "time": "2026-05-11T09:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "ht003",
+      "employeeId": "3",
+      "employeeName": "Sarah Johnson",
+      "department": "HR",
+      "category": "Benefits",
+      "subject": "Health insurance card not received",
+      "description": "My health insurance card was not received after joining.",
+      "priority": "Low",
+      "status": "Resolved",
+      "createdAt": "2026-04-20T11:00:00Z",
+      "updatedAt": "2026-04-25T16:00:00Z",
+      "assignedTo": "Admin User",
+      "comments": []
+    }
+  ],
+  "appointments": [
+    {
+      "id": "ap001",
+      "employeeId": "2",
+      "employeeName": "John Smith",
+      "counselorName": "Dr. Priya Menon",
+      "counselorSpecialty": "Mental Health Coach",
+      "date": "2026-05-20",
+      "time": "10:00 AM",
+      "type": "Mental Wellness",
+      "mode": "Video Call",
+      "status": "Confirmed",
+      "notes": "Stress management session",
+      "createdAt": "2026-05-10T12:00:00Z"
+    },
+    {
+      "id": "ap002",
+      "employeeId": "3",
+      "employeeName": "Sarah Johnson",
+      "counselorName": "Dr. Arjun Nair",
+      "counselorSpecialty": "Nutritionist",
+      "date": "2026-05-15",
+      "time": "02:00 PM",
+      "type": "Nutrition Counseling",
+      "mode": "In-Person",
+      "status": "Completed",
+      "notes": "Diet plan review",
+      "createdAt": "2026-05-08T09:00:00Z"
+    },
+    {
+      "id": "ap003",
+      "employeeId": "4",
+      "employeeName": "Mike Chen",
+      "counselorName": "Dr. Lena Thomas",
+      "counselorSpecialty": "Fitness Coach",
+      "date": "2026-05-25",
+      "time": "11:00 AM",
+      "type": "Fitness Assessment",
+      "mode": "In-Person",
+      "status": "Pending",
+      "notes": "Initial fitness assessment",
+      "createdAt": "2026-05-11T10:00:00Z"
+    }
+  ],
+  "counselors": [
+    {
+      "id": "c001",
+      "name": "Dr. Priya Menon",
+      "specialty": "Mental Health Coach",
+      "experience": "8 years",
+      "rating": 4.9,
+      "available": true,
+      "image": "PM",
+      "slots": ["09:00 AM", "10:00 AM", "11:00 AM", "02:00 PM", "03:00 PM"]
+    },
+    {
+      "id": "c002",
+      "name": "Dr. Arjun Nair",
+      "specialty": "Nutritionist",
+      "experience": "6 years",
+      "rating": 4.7,
+      "available": true,
+      "image": "AN",
+      "slots": ["10:00 AM", "11:00 AM", "01:00 PM", "02:00 PM", "04:00 PM"]
+    },
+    {
+      "id": "c003",
+      "name": "Dr. Lena Thomas",
+      "specialty": "Fitness Coach",
+      "experience": "5 years",
+      "rating": 4.8,
+      "available": true,
+      "image": "LT",
+      "slots": ["08:00 AM", "09:00 AM", "11:00 AM", "03:00 PM", "05:00 PM"]
+    },
+    {
+      "id": "c004",
+      "name": "Dr. Ravi Kumar",
+      "specialty": "Stress Management",
+      "experience": "10 years",
+      "rating": 4.6,
+      "available": false,
+      "image": "RK",
+      "slots": ["10:00 AM", "12:00 PM", "02:00 PM"]
+    }
+  ],
+  "resources": [
+    {
+      "id": "r001",
+      "title": "Work-Life Balance Guide",
+      "category": "Wellness",
+      "type": "Article",
+      "description": "Comprehensive guide to maintaining healthy work-life balance in modern workplaces.",
+      "readTime": "5 min",
+      "tags": ["wellness", "balance", "productivity"],
+      "publishedAt": "2026-04-01T00:00:00Z",
+      "featured": true
+    },
+    {
+      "id": "r002",
+      "title": "Annual Leave Policy 2026",
+      "category": "HR Policy",
+      "type": "Policy",
+      "description": "Complete details on annual leave entitlements, carryover rules, and application process.",
+      "readTime": "8 min",
+      "tags": ["leave", "policy", "HR"],
+      "publishedAt": "2026-01-01T00:00:00Z",
+      "featured": false
+    },
+    {
+      "id": "r003",
+      "title": "Mindfulness at Work",
+      "category": "Mental Health",
+      "type": "Article",
+      "description": "Practical mindfulness techniques to reduce workplace anxiety and improve focus.",
+      "readTime": "4 min",
+      "tags": ["mindfulness", "mental health", "focus"],
+      "publishedAt": "2026-03-15T00:00:00Z",
+      "featured": true
+    },
+    {
+      "id": "r004",
+      "title": "Code of Conduct",
+      "category": "HR Policy",
+      "type": "Policy",
+      "description": "Company standards for professional behavior, communication, and workplace ethics.",
+      "readTime": "12 min",
+      "tags": ["conduct", "ethics", "policy"],
+      "publishedAt": "2026-01-01T00:00:00Z",
+      "featured": false
+    },
+    {
+      "id": "r005",
+      "title": "Nutrition for Desk Workers",
+      "category": "Wellness",
+      "type": "Article",
+      "description": "Dietary tips and meal planning specifically for professionals who spend long hours at desks.",
+      "readTime": "6 min",
+      "tags": ["nutrition", "health", "diet"],
+      "publishedAt": "2026-04-20T00:00:00Z",
+      "featured": true
+    },
+    {
+      "id": "r006",
+      "title": "Remote Work Policy",
+      "category": "HR Policy",
+      "type": "Policy",
+      "description": "Guidelines for work-from-home eligibility, expectations, and communication protocols.",
+      "readTime": "10 min",
+      "tags": ["remote", "WFH", "policy"],
+      "publishedAt": "2026-02-10T00:00:00Z",
+      "featured": false
+    }
+  ],
+  "announcements": [
+    {
+      "id": "ann001",
+      "title": "Wellness Week 2026 — May 20-24",
+      "message": "Join us for a week of wellness activities including yoga sessions, nutrition talks, and meditation workshops. All employees are encouraged to participate!",
+      "type": "Event",
+      "priority": "high",
+      "createdAt": "2026-05-01T09:00:00Z",
+      "expiresAt": "2026-05-25T00:00:00Z",
+      "author": "HR Team"
+    },
+    {
+      "id": "ann002",
+      "title": "Updated Leave Policy Effective June 1",
+      "message": "The company's leave policy has been updated. Key changes include enhanced paternity leave and new mental health days. Read the full policy in the Knowledge Base.",
+      "type": "Policy Update",
+      "priority": "medium",
+      "createdAt": "2026-05-05T10:00:00Z",
+      "expiresAt": "2026-06-30T00:00:00Z",
+      "author": "HR Team"
+    },
+    {
+      "id": "ann003",
+      "title": "Q1 Performance Reviews Scheduled",
+      "message": "Q1 performance reviews will be conducted from May 25 to June 5. Please ensure your self-assessments are submitted by May 20.",
+      "type": "Reminder",
+      "priority": "medium",
+      "createdAt": "2026-05-10T08:00:00Z",
+      "expiresAt": "2026-06-05T00:00:00Z",
+      "author": "Admin Team"
+    }
+  ],
+  "attendance": [
+    { "id": "att001", "employeeId": "2", "date": "2026-05-11", "checkIn": "09:02 AM", "checkOut": "06:15 PM", "status": "Present", "hoursWorked": 9.2 },
+    { "id": "att002", "employeeId": "2", "date": "2026-05-10", "checkIn": "09:15 AM", "checkOut": "06:00 PM", "status": "Present", "hoursWorked": 8.8 },
+    { "id": "att003", "employeeId": "2", "date": "2026-05-09", "checkIn": "09:00 AM", "checkOut": "05:45 PM", "status": "Present", "hoursWorked": 8.8 },
+    { "id": "att004", "employeeId": "2", "date": "2026-05-08", "checkIn": "09:30 AM", "checkOut": "06:30 PM", "status": "Late", "hoursWorked": 9.0 },
+    { "id": "att005", "employeeId": "2", "date": "2026-05-07", "checkIn": null, "checkOut": null, "status": "Absent", "hoursWorked": 0 },
+    { "id": "att006", "employeeId": "3", "date": "2026-05-11", "checkIn": "08:55 AM", "checkOut": "06:00 PM", "status": "Present", "hoursWorked": 9.1 },
+    { "id": "att007", "employeeId": "4", "date": "2026-05-11", "checkIn": "09:10 AM", "checkOut": "06:05 PM", "status": "Present", "hoursWorked": 8.9 }
+  ]
+}
