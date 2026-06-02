@@ -208,7 +208,7 @@ app.listen(PORT, async () => {
   console.log(`    Health: http://localhost:${PORT}/api/health\n`);
 });
 
-// module.exports = app;
+module.exports = app;
 
 // require('dotenv').config();
 // const express  = require('express');
