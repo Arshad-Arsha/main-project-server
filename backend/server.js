@@ -12,7 +12,7 @@ const appointmentRoutes = require('./routes/appointmentRoutes');
 const dashboardRoutes   = require('./routes/dashboardRoutes');
 
 const app  = express();
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 9000;
 
 // ─── CORS ─────────────────────────────────────────────────
 const allowedOrigins = [
