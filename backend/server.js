@@ -44,13 +44,13 @@ const PORT = process.env.PORT || 9000;
 // const allowedOrigins = [
 //   'http://localhost:5173',
 //   'http://localhost:3000',
-//   'https://main-project-6hns.vercel.app', // 👈 നിങ്ങളുടെ പ്രധാന Vercel URL
+//   'https://main-project-6hns.vercel.app', 
 //   'https://careconnectad.netlify.app'
 // ];
 
 // app.use(cors({
 //   origin: (origin, callback) => {
-//     // !origin എന്നാൽ Postman അല്ലെങ്കിൽ മൊബൈൽ ആപ്പുകളിൽ നിന്നുള്ള റിക്വസ്റ്റുകൾ
+//    
 //     if (
 //       !origin || 
 //       allowedOrigins.includes(origin) || 
