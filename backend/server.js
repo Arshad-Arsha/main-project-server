@@ -22,26 +22,10 @@ const allowedOrigins = process.env.ALLOWED_ORIGINS
       'http://localhost:5173',
     ];
 
-// app.use(cors({
-//   origin: (origin, callback) => {
-//     // Allow requests with no origin (e.g. mobile apps, curl) and whitelisted origins
-//     if (!origin || allowedOrigins.includes(origin) || /\.vercel\.app$/.test(origin)) {
-//       callback(null, true);
-//     } else {
-//       callback(new Error('Not allowed by CORS'));
-//     }
-//   },
-//   credentials: true,
-//   optionsSuccessStatus: 200
-// }));
 app.use(cors({
   origin: (origin, callback) => {
-    if (
-      !origin ||
-      allowedOrigins.includes(origin) ||
-      /\.vercel\.app$/.test(origin) ||
-      /\.netlify\.app$/.test(origin) // ✅ ADD THIS
-    ) {
+    // Allow requests with no origin (e.g. mobile apps, curl) and whitelisted origins
+    if (!origin || allowedOrigins.includes(origin) || /\.vercel\.app$/.test(origin)) {
       callback(null, true);
     } else {
       callback(new Error('Not allowed by CORS'));
@@ -50,6 +34,22 @@ app.use(cors({
   credentials: true,
   optionsSuccessStatus: 200
 }));
+// app.use(cors({
+//   origin: (origin, callback) => {
+//     if (
+//       !origin ||
+//       allowedOrigins.includes(origin) ||
+//       /\.vercel\.app$/.test(origin) ||
+//       /\.netlify\.app$/.test(origin) // ✅ ADD THIS
+//     ) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error('Not allowed by CORS'));
+//     }
+//   },
+//   credentials: true,
+//   optionsSuccessStatus: 200
+// }));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
