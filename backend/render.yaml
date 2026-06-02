@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: careconnect-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: PORT
+        value: 9000
+      - key: MONGO
+        sync: false          # set this manually in Render dashboard
+      - key: ACCESS_SECRET_KEY
+        sync: false          # set this manually in Render dashboard
+      - key: REFRESH_SECRET_KEY
+        sync: false          # set this manually in Render dashboard
+      - key: ALLOWED_ORIGINS
+        sync: false          # e.g. https://your-app.vercel.app
